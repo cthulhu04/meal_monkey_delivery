@@ -1,6 +1,8 @@
 import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:meal_monkey_food_delivery/functionality/assets_widgets.dart';
+import 'package:meal_monkey_food_delivery/screens/my_orders_screen.dart';
 
 Widget headerAppBar({
   bool automaticallyImplyLeading = false,
@@ -10,7 +12,10 @@ Widget headerAppBar({
   bool transparent = false,
 }) {
   return AppBar(
-    title: Text(text),
+    title: Padding(
+      padding: EdgeInsets.only(left: 10),
+      child: Text(text),
+    ),
     backgroundColor: transparent ? Colors.transparent : null,
     automaticallyImplyLeading: automaticallyImplyLeading,
     elevation: 0.0,
@@ -26,13 +31,13 @@ Widget headerAppBar({
     actions: actions
         ? [
             Padding(
-              padding: EdgeInsets.only(right: 10.0),
+              padding: EdgeInsets.only(right: 20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   GestureDetector(
                     child: FaIcon(FontAwesomeIcons.shoppingCart),
-                    onTap: () => print('cart screen / checkout'),
+                    onTap: () => navigate_myOrder_screen(context: context),
                   ),
                 ],
               ),

@@ -5,7 +5,15 @@ class PrimaryButton extends StatelessWidget {
   bool color;
   Widget widget;
   Function function;
-  PrimaryButton({this.color = true, this.widget, this.function});
+  double width;
+  double height;
+  PrimaryButton({
+    this.color = true,
+    this.widget,
+    this.function,
+    this.width = double.infinity,
+    this.height,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,7 +23,8 @@ class PrimaryButton extends StatelessWidget {
         border: Border.all(color: fivePrimaryColor),
         borderRadius: BorderRadius.circular(50.0),
       ),
-      width: double.infinity,
+      width: width,
+      height: height,
       child: TextButton(
         onPressed: function,
         child: Center(

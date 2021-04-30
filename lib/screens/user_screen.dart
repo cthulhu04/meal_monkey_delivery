@@ -1,10 +1,11 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_food_delivery/functionality/assets.dart';
+import 'package:meal_monkey_food_delivery/functionality/assets_widgets.dart';
 import 'package:meal_monkey_food_delivery/screens/home_screen.dart';
 import 'package:meal_monkey_food_delivery/screens/menu_screen.dart';
+import 'package:meal_monkey_food_delivery/screens/more_screen.dart';
 import 'package:meal_monkey_food_delivery/screens/offert_screen.dart';
+import 'package:meal_monkey_food_delivery/screens/profile_screen.dart';
 import 'package:meal_monkey_food_delivery/widget/bottom_navigation.dart';
 import 'package:meal_monkey_food_delivery/widget/buttom_navigation_floatbutton.dart';
 import 'package:meal_monkey_food_delivery/widget/header_appbar.dart';
@@ -17,7 +18,6 @@ class UserScreen extends StatefulWidget {
 
 class _UserScreenState extends State<UserScreen> {
   int currentIndex = 0;
-  String userName = 'Diego';
   PageController _pageController;
   List<String> _headerText = [
     'Good morning Akila!',
@@ -38,12 +38,13 @@ class _UserScreenState extends State<UserScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: headerAppBar(
         text: _headerText[currentIndex],
+        context: context,
         actions: true,
       ),
       body: PageView(
@@ -54,6 +55,8 @@ class _UserScreenState extends State<UserScreen> {
           HomeScreen(),
           MenuScreen(),
           OffertScreen(),
+          ProfileScreen(),
+          MoreScreen(),
         ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meal_monkey_food_delivery/widget/popular_restaurants.dart';
 import 'package:meal_monkey_food_delivery/widget/primary_button.dart';
 
 class OffertScreen extends StatefulWidget {
@@ -11,20 +12,36 @@ class _OffertScreenState extends State<OffertScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: ListView(
+        physics: BouncingScrollPhysics(),
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
-            child: Text(
-              'Find discounts, Offers specialmeals and more!',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.w500,
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Find discounts, Offers special',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(height: 40),
+                PrimaryButton(
+                  width: 200,
+                  height: 50,
+                  widget: Text(
+                    'Check Offers',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  function: () {},
+                )
+              ],
             ),
           ),
-          PrimaryButton(
-            widget: Text('hello'),
-          )
+          SizedBox(height: 20),
+          PopularRestaurants(),
+          SizedBox(height: 40),
         ],
       ),
     );

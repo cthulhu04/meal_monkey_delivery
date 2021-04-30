@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meal_monkey_food_delivery/constants/main_colors.dart';
 import 'package:meal_monkey_food_delivery/constants/text_style_constants.dart';
-import 'package:meal_monkey_food_delivery/functionality/assets.dart';
+import 'package:meal_monkey_food_delivery/functionality/assets_widgets.dart';
 
 Widget menu_card_header({String title, double price}) {
   return Column(

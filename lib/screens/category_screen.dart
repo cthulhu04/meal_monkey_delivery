@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meal_monkey_food_delivery/functionality/assets.dart';
+import 'package:meal_monkey_food_delivery/functionality/assets_widgets.dart';
 import 'package:meal_monkey_food_delivery/functionality/global_functions.dart';
 import 'package:meal_monkey_food_delivery/models/menus.dart';
 import 'package:meal_monkey_food_delivery/widget/food_card.dart';

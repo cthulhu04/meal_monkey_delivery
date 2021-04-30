@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:meal_monkey_food_delivery/Routes.dart';
 import 'package:meal_monkey_food_delivery/constants/main_colors.dart';
 import 'package:meal_monkey_food_delivery/constants/route_constants.dart';
-import 'file:///D:/AndroidStudioProjects/meal_monkey_food_delivery/lib/providers/user_provider.dart';
+import 'package:meal_monkey_food_delivery/providers/add_credit_card.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
   static String appTitle = 'meal monkey food delivery';
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(
-        create: (context) => UserProvider(),
-        lazy: true,
+        create: (context) => AddCreditCards(),
         child: MaterialApp(
           title: appTitle,
           debugShowCheckedModeBanner: false,
