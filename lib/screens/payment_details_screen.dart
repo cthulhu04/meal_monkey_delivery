@@ -130,7 +130,7 @@ class _PaymentDetailsScreenState extends State<PaymentDetailsScreen> {
                     size: 25.0,
                   ),
                   Text(
-                    'ddd',
+                    'add credit card',
                     style: TextStyle(
                       fontSize: 21.0,
                       fontWeight: FontWeight.w800,
