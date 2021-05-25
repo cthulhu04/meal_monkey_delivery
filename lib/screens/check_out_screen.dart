@@ -1,8 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:meal_monkey_food_delivery/constants/main_colors.dart';
 import 'package:meal_monkey_food_delivery/constants/text_style_constants.dart';
-import 'package:meal_monkey_food_delivery/functionality/assets_widgets.dart';
 import 'package:meal_monkey_food_delivery/functionality/global_functions.dart';
 import 'package:meal_monkey_food_delivery/models/credit_card_model.dart';
 import 'package:meal_monkey_food_delivery/models/my_order.dart';
@@ -82,7 +80,10 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Payment method'),
-                      Text('add card'),
+                      GestureDetector(
+                        onTap: () => print('add card'),
+                        child: Text('add card'),
+                      ),
                     ],
                   ),
                 ),
